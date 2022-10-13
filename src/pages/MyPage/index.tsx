@@ -17,6 +17,8 @@ function MyPage() {
   const logOut = () => {
     removeCookie('accessToken');
     removeCookie('refreshToken');
+    alert('로그아웃 되었습니다.');
+    navigate('/'); // 새로고침
     navigate(0); // 새로고침
   };
   return (
