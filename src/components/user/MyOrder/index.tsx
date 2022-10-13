@@ -21,14 +21,14 @@ function MyOrder() {
       </S.Title>
 
       <div className="detail">
-        <MyOrderDetail count={1} description={'입금 대기'} />
-        <MyOrderDetail count={2} description={'배송 준비중'} point />
+        <MyOrderDetail count={0} description={'입금 대기'} />
+        <MyOrderDetail count={0} description={'배송 준비중'} point />
         <MyOrderDetail count={0} description={'배송중'} />
-        <MyOrderDetail count={3} description={'배송 완료'} />
+        <MyOrderDetail count={0} description={'배송 완료'} />
       </div>
       <div className="cancel-box">
         <div className="cancel">
-          <MyOrderCancel count={1} description={'취소'} />
+          <MyOrderCancel count={0} description={'취소'} />
           <div className="hr" />
           <MyOrderCancel count={0} description={'반품'} />
         </div>
