@@ -20,11 +20,15 @@ const ContactInfo = () => {
       <S.Grid>
         <S.Item>
           <h2>고객센터</h2>
-          <span>050-3558-2356</span>
+          <a href="tel:050-3358-2356">
+            <span>050-3558-2356</span>
+          </a>
         </S.Item>
         <S.Item>
-          <h2>E-mail</h2>
-          <span>info@onulstore.jp</span>
+          <a href="mailto:info@onulstore.jp">
+            <h2>E-mail</h2>
+            <span>info@onulstore.jp</span>
+          </a>
         </S.Item>
         <S.Item>
           <span className="contact-time">월 ~ 금 10:00 - 17:00 (토, 일, 공휴일 휴무)</span>
@@ -43,7 +47,7 @@ const CustomerService = () => {
           <Link to={''}>특정 상거래법</Link>
         </li>
         <li>
-          <Link to={''}>개인 정보 보호 정책</Link>
+          <Link to={'/privacy-policy'}>개인 정보 보호 정책</Link>
         </li>
       </ul>
     </S.InfoForCustomer>
@@ -61,7 +65,7 @@ const AboutOnul = () => {
           <Link to={''}>회사정보</Link>
         </li>
         <li>
-          <Link to={''}>이용 약관</Link>
+          <Link to={'/terms-of-service'}>이용 약관</Link>
         </li>
         <li>
           <Link to={''}>이용 안내</Link>
