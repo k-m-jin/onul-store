@@ -8,20 +8,42 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const useItemSlice = () => {
   const {
     isShowLargeCategoryModal,
-    allItemList,
-    singleItemList,
+    isShowSmallCategoryModal,
+    isShowBrandSelectdBox,
+    isShowItemSortSelectBox,
     isDetailPage,
     isLoding,
+
+    allItemList,
+    singleItemList,
+
+    allBrandList,
+    filteredBrandList,
+
+    nowPostionTitle,
+
     searchAddress,
     dumyImageIndex,
   } = useAppSelector((state) => state.item);
   return {
     isShowLargeCategoryModal,
+    isShowSmallCategoryModal,
+    isShowBrandSelectdBox,
+    isShowItemSortSelectBox,
+
+    isLoding,
+    isDetailPage,
+
     allItemList,
     singleItemList,
-    isDetailPage,
+
+    allBrandList,
+    filteredBrandList,
+
+    nowPostionTitle,
+
     searchAddress,
-    isLoding,
+
     dumyImageIndex,
   };
 };
@@ -72,4 +94,19 @@ export const useUserSlice = () => {
     roadAddress,
     username,
   };
+};
+
+//Curation
+export const useCurationSlice = () => {
+  const { curationsData, magazineData, recommendData, magazineInHomePage, recommendInHomePage } =
+    useAppSelector((state) => state.curation);
+
+  return { curationsData, magazineData, recommendData, magazineInHomePage, recommendInHomePage };
+};
+
+//Search
+export const useSearchSlice = () => {
+  const { searchData } = useAppSelector((state) => state.search);
+
+  return { searchData };
 };
